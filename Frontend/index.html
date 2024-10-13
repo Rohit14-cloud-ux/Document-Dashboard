@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="toggleSidebar" class="toggle-sidebar">☰</button>
+    <div class="sidebar">
+        <div class="logo">Company Logo</div>
+        <ul>
+            <li>Dashboard</li>
+            <li>Documents</li>
+            <li>Procurement</li>
+            <li>Fabrication</li>
+            <li>Costing</li>
+            <li>Summary</li>
+            <!-- Add Font Awesome CDN in your <head> if not already included -->
+
+<input type="file" id="fileInput" style="display: none;" />
+
+
+
+<!-- Toggle Button -->
+<button class="toggle-sidebar" onclick="toggleSidebar()">
+  <i class="fas fa-chevron-left icon"></i>
+</button>
+
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="top-bar">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <div class="buttons">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+                <input type="file" id="fileInput" accept=".pdf,.xlsx,.docx,.rar" style="display: none;">
+                <button class="button upload" onclick="document.getElementById('fileInput').click()">Upload</button>
+                <button class="button download">Download</button>
+            </div>
+        </div>
+        <div class="categories">
+            <h2>Categories</h2>
+            <div class="category-box">
+                <div class="category small">Quality <span>7 Docs</span></div>
+                <div class="category">Design <span>45 Docs</span></div>
+                <div class="category">Vendor <span>50 Docs</span></div>
+                <div class="category">Electrical and Instrumentation <span>20 Docs</span></div>
+                <div class="category small">Others <span>10 Docs</span></div>
+            </div>
+        </div>
+        <div class="status-section">
+            <h2>Status</h2>
+            <div class="status-boxes">
+                <div class="status-box small">
+                    <h3>Pending Submission</h3>
+                    <p>3 out of 7</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 42.86%"></div>
+                    </div>
+                </div>
+                <div class="status-box">
+                    <h3>Approved</h3>
+                    <p>2 out of 7</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 28.57%"></div>
+                    </div>
+                </div>
+                <div class="status-box">
+                    <h3>Pending First Submission</h3>
+                    <p>1 out of 7</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 14.29%"></div>
+                    </div>
+                </div>
+                <div class="status-box">
+                    <h3>Awaiting Approval</h3>
+                    <p>1 out of 7</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 14.29%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="document-list">
+            <h2>Document List</h2>
+            <table>
+                <tr>
+                    <th>Doc Number</th>
+                    <th>Doc Name</th>
+                    <th>Revision</th>
+                    <th>Due Date</th>
+                    <th>Code</th>
+                    <th>Status</th>
+                    <th>Submission Date</th>
+                    <th>Received Date</th>
+                    <th>Delay</th>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td>Sample Document</td>
+                    <td>A</td>
+                    <td>2023-07-30</td>
+                    <td>ABC123</td>
+                    <td>Pending Submission</td>
+                    <td>2023-07-25</td>
+                    <td>-</td>
+                    <td>5 days</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
